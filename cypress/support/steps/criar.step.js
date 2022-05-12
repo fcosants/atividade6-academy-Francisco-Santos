@@ -46,9 +46,9 @@ When ("preencho o e-mail já utilizado", (tabela) => {
     })
 })
 
-When ("preencho o campo nome com mais de 100 caracteres", (tabela) => {
+When ("preencho o campo com mais de 100 caracteres", (tabela) => {
     var dadosTabela = tabela.rowsHash();
-    criarPage.preencherNome100Caracteres(dadosTabela.nome);
+    criarPage.preencherFormulario(dadosTabela.nome, dadosTabela.email);
 })
 
 And ("preencho o campo email", (tabela) => {
@@ -61,9 +61,9 @@ When ("preencho o campo nome válido", (tabela) => {
     criarPage.preencherNome(dadosTabela.nome);
 })
 
-And ("preencho o campo email com mais de 60 caracteres", (tabela) => {
+And ("preencho o campo com mais de 60 caracteres", (tabela) => {
     var dadosTabela = tabela.rowsHash();  
-    criarPage.Email60Caracteres(dadosTabela.email)
+    criarPage.preencherFormulario(dadosTabela.email)
 })
 
 When ("clico no botão voltar", () => {

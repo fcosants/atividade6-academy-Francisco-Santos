@@ -30,21 +30,19 @@ Para poder manipular estas informações livremente
           Then visualizo uma mensagem de erro
           | mensagemErro | Este e-mail já é utilizado por outro usuário |
 
-     Scenario: Cadastrar um nome com mais de 100 caracteres
+     Scenario: Cadastrar nome com mais de 100 caracteres
          Given acessei a tela de cadastro
-         When preencho o campo nome com mais de 100 caracteres
+         When preencho o campo com mais de 100 caracteres
          | nome  | ChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChicoChico |
-         And preencho o campo email
-         | email | gohan@g.com                                                                                                    |
+         | email | gohan@g.com                                                                                                   |
          Then visualizo uma mensagem de erro
          | mensagemErro | Informe no máximo 100 caracteres para o nome |
     
     Scenario: Cadastrar um e-mail com mais de 60 caracteres
         Given acessei a tela de cadastro
-        When preencho o campo nome válido
-        | nome  | Goku |
-        And preencho o campo email com mais de 60 caracteres
-        | email |chicochicochicochicochicochicochicochicochicochicochicochico@g.com |
+        When preencho o campo com mais de 60 caracteres
+        | nome  | Goku                                                               |
+        | email |chicochicochicochicochicochicochicochicochicochicochicochico@g.com  |
         Then visualizo uma mensagem de erro
         | mensagemErro | Informe no máximo 60 caracteres para o e-mail |
 
